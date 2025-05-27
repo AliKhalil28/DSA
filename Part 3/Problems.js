@@ -144,3 +144,75 @@ if (isNaN(num)) {
 */
 
 // Q6 -> Repeat Hello
+/*
+do {
+  var prom = prompt("Enter a number to repeat hello -- (0 for exit)");
+  if (prom === "0") break;
+  let num = Number(prom);
+  let result = "";
+  if (num > 0) {
+    for (let i = 0; i < num; i++) {
+      result += "Hello ";
+    }
+    console.log(result);
+  }
+  console.log(prom);
+} while (prom !== "0");
+*/
+
+// Q7 -> Guess a number 1 - 100
+/*
+let random = Math.floor(Math.random() * 100) + 1;
+console.log(random);
+let userNum = -1;
+let attempt = 1;
+while (userNum !== random) {
+  userNum = Number(prompt("Guess a number between 0-100"));
+  if (isNaN(userNum) || userNum < 1 || userNum > 100) {
+    console.log("Please Enter a number between 1-100");
+    continue;
+  }
+  if (userNum > random) {
+    console.log("Your number is too high");
+  } else if (userNum < random) {
+    console.log("Your number is too low");
+  } else {
+    console.log(
+      `Congrats 🎉 You Guess the correct number: ${random} in ${attempt} attempts`
+    );
+  }
+  attempt++;
+}
+*/
+
+// Q8 -> Calculator
+/*
+do {
+  let num1 = Number(prompt("Enter first number: (0 for exit)"));
+  if (num1 === 0) break;
+  let num2 = Number(prompt("Enter second number: "));
+  let operation = prompt("Enter operation: +, -, X, / or exit for quit");
+
+  if (operation === "exit") break;
+
+  let result;
+  if (operation === "+") {
+    result = num1 + num2;
+  } else if (operation === "-") {
+    result = num1 - num2;
+  } else if (operation === "*") {
+    result = num1 * num2;
+  } else if (operation === "/") {
+    if (num2 === 0) {
+      console.log("Error: Cannot divide by zero");
+      continue; // Skip to the next iteration
+    }
+    result = num1 / num2;
+  } else {
+    console.log("Invalid operation! Please use +, -, *, or /");
+    continue; // Skip to the next iteration
+  }
+
+  console.log(`${num1} ${operation} ${num2} = ${result}`);
+} while (true);
+*/
